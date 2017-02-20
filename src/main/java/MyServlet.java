@@ -10,24 +10,41 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 public class MyServlet extends HttpServlet {
 
 
-    static String reverse(String s) {
-        int length = s.length();
-        char[] c = s.toCharArray();
-        String res="";
-        for (int i = length-1; i  > -1; i--) {
-            res=res+c[i];
+    static public String getRoots(String coeffs) {
+        String result;
+        String[] abc = new String[3];
+        abc = coeffs.split("/");
+        double a = Double.parseDouble(abc[0]);
+        double b = Double.parseDouble(abc[1]);
+        double c = Double.parseDouble(abc[2]);
+        double D = pow(b, 2) - 4 * a * c;
+        if (D < 0) {
+            result = "У данного уравнения имеются комплексные корни";
         }
-        return res;    }
+        else if (D == 0) {
+            double root = -b / 2 * a;
+            result = " У данного уравнения имеется единственный корень х = " + root;
+        } else {
+            double root1 = -b + sqrt(D) / 2 * a;
+            double root2 = -b - sqrt(D) / 2 * a;
+            result = " Корнями данного уравнения являются х1 = " + root1 + ", x2 = " + root2;
+        }
 
+        return result;
+    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
+        response.setCharacterEncoding("windows-1251");
         PrintWriter out = response.getWriter();
         BufferedReader reader = request.getReader();
         String rev=reader.readLine();
-        rev=reverse(rev);
+        rev=getRoots(rev);
         out.println("<h1> "+ rev +"</h1>");;
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
