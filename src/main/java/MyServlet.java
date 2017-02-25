@@ -40,7 +40,7 @@ public class MyServlet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        response.setCharacterEncoding("windows-1251");
+        response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         BufferedReader reader = request.getReader();
         String rev=reader.readLine();

@@ -5,18 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>boilerplate-war</artifactId>
-    <version>0_0_1-SNAPSHOT</version>
+    <artifactId>equation</artifactId>
+    <version>Solver 1.0</version>
     <packaging>war</packaging>
-    <name>boilerplate-war</name>
+    <name>equation</name>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
             <type>jar</type>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <build>
@@ -29,32 +29,15 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
+                    <!--suppress MavenModelInspection -->
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <groupId>hellogwt</groupId>
-    <artifactId>hellogwt</artifactId>
-    <version>1.0</version>
-    <packaging>war</packaging>
 
-    <properties>
-        <spring.version>4.2.4.RELEASE</spring.version>
-    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <finalName>hellogwt</finalName>
-    </build>
 
 </project>
 

@@ -2,46 +2,25 @@
 
 
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-    <link rel="stylesheet" type="text/css" href=“C:\proj\src\main\webapp\WEB-INF\notboringstyle.css"/>
-
+    <meta http-equiv="Content-Type" content="text/html"; charset="windows-1251">
 </head>
-
-<body>
+<script src="/js/jquery-3.1.1.js"></script>
 <script src="/js/jscript.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/notboringstyle.css">
+<div align="center">
+<h1 class="pink"> Введите коэффиценты квадратного уравнения:</h1>
 
-<h1 class="pink" > Введите коэффиценты квадратного уравнения:</h1>
+<h1 class="blue"> <input class="ins" type="text" name="a" id="a"> x <sup>2</sup> +
+        <input class="ins" type="text" name="b" id="b"> x + <input class="ins" type="text" name="c" id="c"> = 0 </h1>
+    <input class="button" value="Найти корни"  onclick="reverse()" type="button" width="100pt" align="center" />
+<div class="div" id="stus"></div>
+<table  id = "answersheet" width="500" border="2" >
+    <tbody id="bodytable">
+    <tr id="unit" ><td></td></tr>
+    </tbody>
 
-<input type="text" name="a" id="a"> x <sup>2</sup> +
-        <input type="text" name="b" id="b"> x + <input type="text" name="c" id="c"> = 0
-
-    <p><input value="Найти корни" onclick="reverse()" type="button" />
-
-
-
-<div id="stus"></div>
-<script>
-
-    function reverse() {
-        var req = new XMLHttpRequest();
-        var statusElem = document.getElementById('stus');
-        req.open('Post', 'MyServlet', true);
-        var inputvalue=document.getElementById("a").value.toString()+"/"+
-            document.getElementById("b").value.toString()+"/"+document.getElementById("c").value.toString();
-        req.send(inputvalue); // отослать запрос
-
-        req.onreadystatechange = function() {
-
-                statusElem.innerHTML = req.responseText ;  //ответ
-            }
-        }
-       // statusElem.innerHTML = 'Ожидаю ответа ...'
-
-
-</script>
-
-</body>
+</table>
+</div>
 </html>
 
