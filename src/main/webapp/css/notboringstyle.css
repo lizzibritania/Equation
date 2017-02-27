@@ -1,0 +1,20 @@
+
+
+body{backround-color: blue;
+    background-image: url("/pictures/back.jpg");
+}
+caption.cp{ color: blueviolet; text-align: center; font-family: "Comic Sans MS"; font-size: medium }
+h1.pink { color: midnightblue; text-align: center; font-family: "Comic Sans MS"; font-size: large }
+h1.blue { color: blueviolet; text-align: center; font-family: "Comic Sans MS"; font-size: medium }
+input.button{ color: dodgerblue; text-decoration-color: darkblue; align-content: center;alignment: center;font-family: "Comic Sans MS" }
+div.div{ color: darkblue; text-align:center; font-family: "Comic Sans MS"}
+input.ins {width: 50pt;}
+p  { color: white; background-color: black; }
+h1 { color: darkblue; font-size: large; font-weight: bold; }
+h2 { font-weight: 500; color: blue; }
+div.center{align: center;width: 500pt; background-color: cornflowerblue;border: dotted }
+p {
+    padding-left: 20px;
+}
+.c1 {background-color: lightblue; }
+.c2 {background-color:skyblue;}
